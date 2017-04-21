@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import Papa from 'papaparse';
 import logo from './logo.svg';
 import './App.css';
+
+Papa.parse('data.csv', {
+	download: true,
+  header: true,
+  complete: function(results) {
+		console.log(results);
+	}
+});
 
 class App extends Component {
   render() {

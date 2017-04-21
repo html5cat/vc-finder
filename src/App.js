@@ -44,7 +44,10 @@ class App extends Component {
           <TableHeaderColumn dataField='Investor Name' dataSort={ true } isKey>Investor Name</TableHeaderColumn>
           <TableHeaderColumn ref='firm' dataField='Firm' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Firm</TableHeaderColumn>
           <TableHeaderColumn ref='stage' dataField='Company Stage (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Company Stage</TableHeaderColumn>
-
+          <TableHeaderColumn ref='location' dataField='Where I Invest (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Where I Invest (check all)</TableHeaderColumn>
+          <TableHeaderColumn ref='checkSize' dataField='Typical Check Size (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Typical Check Size (check all)</TableHeaderColumn>
+          <TableHeaderColumn ref='focus' dataField='Sectors I Focus On (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Sectors I Focus On (check all)</TableHeaderColumn>
+          <TableHeaderColumn ref='notFocus' dataField="Probably Wouldn't Invest" dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Probably Wouldn't Invest</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );

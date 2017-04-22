@@ -25,10 +25,9 @@ class App extends Component {
   handlerClickCleanFiltered() {
     this.refs.firm.cleanFiltered();
     this.refs.stage.cleanFiltered();
-    // this.refs.quality.cleanFiltered();
-    // this.refs.price.cleanFiltered();
-    // this.refs.satisfaction.cleanFiltered();
-    // this.refs.inStockDate.cleanFiltered();
+    this.refs.focus.cleanFiltered();
+    this.refs.checkSize.cleanFiltered();
+    this.refs.location.cleanFiltered();
   }
 
   render() {
@@ -36,8 +35,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to VC Finder</h2>
-          <p>Data by <a href="https://twitter.com/morganpolotan">Morgan Polotan</a></p>
+          <h2>Welcome to VC Finder (alpha)</h2>
+          <p>Made by <a href="https://twitter.com/html5cat">@html5cat</a> with data by <a href="https://twitter.com/morganpolotan">Morgan Polotan</a></p>
           <p><a onClick={ this.handlerClickCleanFiltered.bind(this) } style={ { cursor: 'pointer' } }>clear filters</a></p>
         </div>
         <BootstrapTable ref='table' data={ Array.isArray(this.state.data)? this.state.data : [] }>
@@ -47,11 +46,13 @@ class App extends Component {
           <TableHeaderColumn ref='location' dataField='Where I Invest (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Where I Invest (check all)</TableHeaderColumn>
           <TableHeaderColumn ref='checkSize' dataField='Typical Check Size (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Typical Check Size (check all)</TableHeaderColumn>
           <TableHeaderColumn ref='focus' dataField='Sectors I Focus On (check all)' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Sectors I Focus On (check all)</TableHeaderColumn>
-          <TableHeaderColumn ref='notFocus' dataField="Probably Wouldn't Invest" dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Probably Wouldn't Invest</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );
   }
 }
+
+// <TableHeaderColumn ref='notFocus' dataField="Probably Wouldn't Invest" dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Probably Wouldn't Invest</TableHeaderColumn>
+
 
 export default App;

@@ -2,7 +2,7 @@
   "name": "vc-finder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://html5cat.github.io/vc-finder",
+  "homepage": "http://vc.dybskiy.com/",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "papaparse": "^4.2.0",

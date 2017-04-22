@@ -25,6 +25,7 @@ class App extends Component {
   handlerClickCleanFiltered() {
     this.refs.map(ref => {
       ref.cleanFiltered();
+      return true;
     });
   }
 

@@ -39,7 +39,7 @@ class App extends Component {
           <p>Made by <a href="https://twitter.com/html5cat">@html5cat</a> with data by <a href="https://twitter.com/morganpolotan">Morgan Polotan</a></p>
           <p><a onClick={ this.handlerClickCleanFiltered.bind(this) } style={ { cursor: 'pointer' } }>clear filters</a></p>
         </div>
-        <BootstrapTable ref='table' data={ Array.isArray(this.state.data)? this.state.data : [] }>
+        <BootstrapTable ref='table' data={ Array.isArray(this.state.data)? this.state.data : [] } pagination>
           <TableHeaderColumn dataField='Investor Name' dataSort={ true } isKey>Investor Name</TableHeaderColumn>
           <TableHeaderColumn ref='firm' dataField='Firm' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Firm</TableHeaderColumn>
           <TableHeaderColumn ref='stage' dataField='Company Stage' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Company Stage</TableHeaderColumn>

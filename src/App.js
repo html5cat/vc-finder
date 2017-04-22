@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to VC Finder (alpha)</h2>
+          <h2>VC Finder (alpha)</h2>
           <p>Made by <a href="https://twitter.com/html5cat">@html5cat</a> with data by <a href="https://twitter.com/morganpolotan">Morgan Polotan</a></p>
           <p><a onClick={ this.handlerClickCleanFiltered.bind(this) } style={ { cursor: 'pointer' } }>clear filters</a></p>
         </div>

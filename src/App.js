@@ -17,7 +17,7 @@ class App extends Component {
       complete: results => {
         let data = results.data;
         this.setState({data});
-        console.log(data);
+        // console.log(data);
       }
     });
   }

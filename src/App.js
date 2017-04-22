@@ -17,16 +17,17 @@ class App extends Component {
       complete: results => {
         let data = results.data;
         this.setState({data});
-        console.log(data);
+        // console.log(data);
       }
     });
   }
 
   handlerClickCleanFiltered() {
-    this.refs.map(ref => {
-      ref.cleanFiltered();
-      return true;
-    });
+    this.refs.firm.cleanFiltered();
+    this.refs.stage.cleanFiltered();
+    this.refs.focus.cleanFiltered();
+    this.refs.checkSize.cleanFiltered();
+    this.refs.location.cleanFiltered();
   }
 
   render() {

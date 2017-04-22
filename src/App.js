@@ -61,18 +61,18 @@ class App extends Component {
         </div>
         <BootstrapTable ref='table' data={ this.state.data } pagination={ true } options={ options }>
           <TableHeaderColumn dataField='Investor Name' dataSort={ true } isKey>Investor Name</TableHeaderColumn>
-          <TableHeaderColumn ref='firm' dataField='Firm' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Firm</TableHeaderColumn>
-          <TableHeaderColumn ref='stage' dataField='Company Stage' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Company Stage</TableHeaderColumn>
-          <TableHeaderColumn ref='location' dataField='Where I Invest' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Where I Invest</TableHeaderColumn>
-          <TableHeaderColumn ref='checkSize' dataField='Typical Check Size' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Typical Check Size</TableHeaderColumn>
-          <TableHeaderColumn ref='focus' dataField='Sectors I Focus On' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Sectors I Focus On</TableHeaderColumn>
+          <TableHeaderColumn ref='firm' dataField='Firm' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Firm</TableHeaderColumn>
+          <TableHeaderColumn ref='stage' dataField='Company Stage' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Company Stage</TableHeaderColumn>
+          <TableHeaderColumn ref='location' dataField='Where I Invest' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Where I Invest</TableHeaderColumn>
+          <TableHeaderColumn ref='checkSize' dataField='Typical Check Size' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Typical Check Size</TableHeaderColumn>
+          <TableHeaderColumn ref='focus' dataField='Sectors I Focus On' dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Sectors I Focus On</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );
   }
 }
 
-// <TableHeaderColumn ref='notFocus' dataField="Probably Wouldn't Invest" dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Please enter a value' } }>Probably Wouldn't Invest</TableHeaderColumn>
+// <TableHeaderColumn ref='notFocus' dataField="Probably Wouldn't Invest" dataSort={ true } filter={ { type: 'TextFilter', placeholder: 'Filter' } }>Probably Wouldn't Invest</TableHeaderColumn>
 
 
 export default App;

@@ -23,11 +23,9 @@ class App extends Component {
   }
 
   handlerClickCleanFiltered() {
-    this.refs.firm.cleanFiltered();
-    this.refs.stage.cleanFiltered();
-    this.refs.focus.cleanFiltered();
-    this.refs.checkSize.cleanFiltered();
-    this.refs.location.cleanFiltered();
+    Object.keys(this.refs).map(ref => {
+      return typeof this.refs[ref].cleanFiltered === "function" ? this.refs[ref].cleanFiltered() : false;
+    });
   }
 
   render() {
